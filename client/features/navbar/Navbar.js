@@ -9,15 +9,12 @@ const Navbar = () => {
 
   return (
     <div>
-      <h1>FS-App-Template</h1>
       <nav>
-
           <div>
             {/* The navbar will show these links after you log in */}
             <Link to="/home">Home</Link>
 
-          </div>
-          
+          </div>     
       </nav>
       <hr />
     </div>
