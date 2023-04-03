@@ -9,14 +9,16 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav>
-          <div>
-            {/* The navbar will show these links after you log in */}
-            <Link to="/home">Home</Link>
-
-          </div>     
+      <nav className='nav' >
+          <section>
+            <h1 className='navName'>Steven Scheck</h1>
+          </section>
+          <section className='navOptions'>
+            <Link className='link' to="/home">Home</Link>
+            <Link className='link' to="/about">About</Link>
+            <Link className='link' to="/contact">Contact Me</Link>
+          </section>     
       </nav>
-      <hr />
     </div>
   );
 };

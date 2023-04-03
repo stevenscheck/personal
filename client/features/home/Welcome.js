@@ -12,7 +12,7 @@ function Welcome() {
     setRippling(true);
     setTimeout(() => {
       navigate("/home");
-    }, 1200);
+    }, 800);
   };
 
   return (
@@ -21,7 +21,6 @@ function Welcome() {
         className="rippleContainer"
         color="rgba(255, 255, 255, 0.5)"
         during={1200}
-        onClick={handleEnterClick}
       >
         <button
           className={`welcomeButton${rippling ? " hidden" : ""}`}
