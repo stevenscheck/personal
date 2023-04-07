@@ -1,22 +1,24 @@
-import { color } from "@mui/system";
 import React, { useState, useEffect } from "react";
 
 const TypingEffect = ({ text, delay, onTypingFinished, smallText }) => {
   const [typedText, setTypedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [typingDone, setTypingDone] = useState(false)
 
   useEffect(() => {
-    let currentIndex = 0;
     const intervalId = setInterval(() => {
       setTypedText(text.slice(0, currentIndex));
-      currentIndex++;
+      setCurrentIndex(currentIndex + 1);
       if (currentIndex > text.length) {
         onTypingFinished && onTypingFinished();
         clearInterval(intervalId);
+        setTypingDone(true)
       }
     }, delay);
 
     return () => clearInterval(intervalId);
-  }, [text, delay]);
+  }, [text, delay, currentIndex, onTypingFinished]);
+
 
   const firstText = {
     color: 'white',
@@ -33,8 +35,8 @@ const TypingEffect = ({ text, delay, onTypingFinished, smallText }) => {
   }
 
   return(
-  <div style={smallText ? secondText : firstText}>{typedText}</div>
+    <div className={typingDone ? '' : 'textTyping'} style={smallText ? secondText : firstText}>{typedText}</div>
   )
 };
 
-export default TypingEffect
+export default TypingEffect;

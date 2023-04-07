@@ -3,6 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../features/home/Home';
 import Welcome from '../features/home/Welcome';
+import EZStack from '../features/projects/EZStack';
+import Pet from '../features/projects/Pet';
+import Projects from '../features/projects/Projects';
+import Weather from '../features/projects/Weather';
 
 
 /**
@@ -18,6 +22,10 @@ const AppRoutes = () => {
           <Route path="/*" element={<Welcome />} />
           <Route path="/home" element={<Home />} />
           <Route path="/welcome" element={<Welcome />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/projects/weather' element={<Weather />} />
+          <Route path='/projects/ezstack' element={<EZStack />} />
+          <Route path='/projects/pets' element={<Pet />} />
         </Routes>
      
     </div>

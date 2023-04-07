@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "JetBrains Mono",monospace;
 }
 
 .welcomePage {
@@ -149,11 +150,158 @@ body{
     color: white;
   }
 
-  .socials ul li {
+  .socials ul li.social-icon {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: .25rem;
     width: 2.5vw;
     height: 5vh;
+    transition: width 0.3s;
+    overflow: hidden;
+  }
+  
+  .socials ul li.social-icon:hover {
+    width: 8vw;
+  }
+  
+  .socials ul li.social-icon:hover span {
+    display: block;
+  }
+  
+  .socials ul li.social-icon span {
+    display: none;
+    font-size: 1.2rem;
+  }
+  
+  .textTyping {
+  }
+  
+  .textTyping::after {
+    content: "|";
+    opacity: 1;
+    animation: blinkCursor 0.7s infinite;
+  }
+
+  @keyframes blinkCursor {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: none;
+  }
+
+  .github{
+    color: black;
+  }
+
+  .nextArrow {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+    bottom: 45vh;
+    left: 92vw;
+    color: white;
+  }
+  
+
+
+  .nextArrow:hover{
+    color: white;
+    text-decoration: underline;
+  }
+
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .wiggle {
+    animation-name: wiggle;
+    animation-duration: .25s;
+    animation-iteration-count: infinite;
+  }
+  
+  .projectsMain{
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .projectsUl{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 95vh;
+    width: 100vw;
+  }
+  
+  ul{
+    list-style: none;
+  }
+  
+  .projectsUl li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+  }
+  
+  .imgContainer {
+    position: relative;
+  }
+  
+  .imgContainer .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98.5%;
+    background-color: rgba(128, 128, 128, .75);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .imgContainer:hover .overlay {
+    opacity: 1;
+  }
+  
+  .projectsUl li img{
+    width: 400px;
+    height: 250px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    z-index: 0;
+  }
+
+  .imgContainer button {
+    position: absolute;
+    top: 43%;
+    left: 34%;
+    z-index: 2;
+    display: none;
+  }
+  
+  .imgContainer:hover button {
+    display: block;
   }

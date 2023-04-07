@@ -14,9 +14,9 @@ const App = () => {
 
   return (
     <div>
-      {/* {location.pathname !== '/' ? 
+      {location.pathname !== '/' ? 
       <Navbar />
-      : null}  */}
+      : null} 
       <AppRoutes />
     </div>
   );
