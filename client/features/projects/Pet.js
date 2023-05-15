@@ -22,7 +22,7 @@ const Pet = () => {
           <h1>Pet Store</h1>
           <div className="stackTopIcons">
             <a href="https://github.com/Team-G-Graceshopper/Grace-Shopper" target="_blank"><GitHubIcon sx={{ fontSize: 40, color: 'black' }}></GitHubIcon></a>
-            <a href="https://weather-stevenscheck.vercel.app/" target="_blank"><YouTubeIcon sx={{ fontSize: 40, color: 'red' }}></YouTubeIcon></a>
+            {/* <a href="https://weather-stevenscheck.vercel.app/" target="_blank"><YouTubeIcon sx={{ fontSize: 40, color: 'red' }}></YouTubeIcon></a> */}
           </div>
         </div>
         <div className="stackDiv">

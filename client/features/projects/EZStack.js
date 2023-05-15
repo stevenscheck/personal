@@ -23,7 +23,7 @@ const EZStack = () => {
           <h1>EZ Stack</h1>
           <div className="stackTopIcons">
             <a href="https://github.com/Team-F-capstone/Capstone" target="_blank"><GitHubIcon sx={{ fontSize: 40, color: 'black' }}></GitHubIcon></a>
-            <a href="https://weather-stevenscheck.vercel.app/" target="_blank"><YouTubeIcon sx={{ fontSize: 40, color: 'red' }}></YouTubeIcon></a>
+            {/* <a href="https://weather-stevenscheck.vercel.app/" target="_blank"><YouTubeIcon sx={{ fontSize: 40, color: 'red' }}></YouTubeIcon></a> */}
           </div>
         </div>
         <div className="stackDiv">
